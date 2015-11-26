@@ -1,58 +1,33 @@
+
 /**
- * A class to model a simple email client. The client is run by a
- * particular user, and sends and retrieves mail via a particular server.
+ * Write a description of class MailClient here.
  * 
- * @author David J. Barnes and Michael Kölling
- * @version 2011.07.31
+ * @author (your name) 
+ * @version (a version number or a date)
  */
 public class MailClient
 {
-    // The server used for sending and receiving.
-    private MailServer server;
-    // The user running this client.
-    private String user;
+    // instance variables - replace the example below with your own
+    private int x;
 
     /**
-     * Create a mail client run by user and attached to the given server.
+     * Constructor for objects of class MailClient
      */
-    public MailClient(MailServer server, String user)
+    public MailClient()
     {
-        this.server = server;
-        this.user = user;
+        // initialise instance variables
+        x = 0;
     }
 
     /**
-     * Return the next mail item (if any) for this user.
+     * An example of a method - replace this comment with your own
+     * 
+     * @param  y   a sample parameter for a method
+     * @return     the sum of x and y 
      */
-    public MailItem getNextMailItem()
+    public int sampleMethod(int y)
     {
-        return server.getNextMailItem(user);
-    }
-
-    /**
-     * Print the next mail item (if any) for this user to the text 
-     * terminal.
-     */
-    public void printNextMailItem()
-    {
-        MailItem item = server.getNextMailItem(user);
-        if(item == null) {
-            System.out.println("No new mail.");
-        }
-        else {
-            item.print();
-        }
-    }
-
-    /**
-     * Send the given message to the given recipient via
-     * the attached mail server.
-     * @param to The intended recipient.
-     * @param message The text of the message to be sent.
-     */
-    public void sendMailItem(String to, String message)
-    {
-        MailItem item = new MailItem(user, to, message);
-        server.post(item);
+        // put your code here
+        return x + y;
     }
 }
