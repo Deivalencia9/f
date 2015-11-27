@@ -1,57 +1,67 @@
 public class MailItem
 {
-	//La direccion del remitente
-	private String from;
-	//La dirección del receptor
-	private String to;
-	//El cuerpo del mensaje de email
-	private String message;
+    //La direccion del remitente
+    private String from;
+    //La dirección del receptor
+    private String to;
+    //El cuerpo del mensaje de email
+    private String message;
+    //Asunto del mensaje
+    private String subject;
 
+    /**
+     * Crea un objeto MailItem inicializando sus atributos
+     * a los valores dados como parametros
+     */
+    public MailItem(String from, String to, String message, String subject)
+    {
+        this.from = from;
+        this.to = to;
+        this.message = message;
+        this.subject = subject;
+    }
 
-	/**
-	 * Crea un objeto MailItem inicializando sus atributos
-	 * a los valores dados como parametros
-	 */
-	public MailItem(String from, String to, String message)
-	{
-		this.from = from;
-		this.to = to;
-		this.message = message;
-	}
-	
-	/**
-	 * Devuelve la direccion el remitente
-	 */
-	public String getFrom(){
-		return from;
+    /**
+     * Devuelve la direccion el remitente
+     */
+    public String getFrom(){
+        return from;
+    }
 
-	}
-	
-	/**
-	 * Devuelve la dirección del receptor
-	 */
-	public String getTo(){
-		return to;
-	}
-	
-	/**
-	 * Devuelve el cuerpo del mensaje
-	 */
-	public String getMessage() {	
+    /**
+     * Devuelve la dirección del receptor
+     */
+    public String getTo()
+    {
+        return to;
+    }
 
-		return message;
-	}
+    /**
+     * Devuelve el cuerpo del mensaje
+     */
+    public String getMessage() 
+    {	
+        return message;
+    }
 
-	/**
-	 * Imprime por pantalla el remitente, el receptor y el
-	 * cuerpo del email
-	 */
-	public void print()
-	{
-		System.out.println ("From: " + from);
-		System.out.println ("To: " + to);
-		System.out.println ("Message: " + message);
-	}
+    /**
+     * Devuelve el asunto del mensaje
+     */
+    public String getSubject() 
+    {
+        return subject;
+    }
 
-	
+    /**
+     * Imprime por pantalla el remitente, el receptor y el
+     * cuerpo del email
+     */
+    public void print()
+    {
+        System.out.println ("From: " + from);
+        System.out.println ("To: " + to);
+        System.out.println ("Message: " + message);
+        System.out.println ("Subject: " + subject);
+    }
+
 }
