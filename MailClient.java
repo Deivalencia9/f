@@ -11,8 +11,8 @@ public class MailClient
 	 */
 	public MailClient(MailServer servidorX, String usuarioX)
 	{
-		user = usuarioX;
-		server = servidorX;
+		this.user = user;
+		this.server = server;
 	}
 
 	/**
