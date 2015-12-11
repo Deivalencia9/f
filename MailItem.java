@@ -6,7 +6,7 @@ public class MailItem
     private String to;
     //El cuerpo del mensaje de email
     private String message;
-    //Asunto del mensaje
+    //El asunto del email
     private String subject;
 
     /**
@@ -26,28 +26,28 @@ public class MailItem
      */
     public String getFrom(){
         return from;
+
     }
 
     /**
      * Devuelve la dirección del receptor
      */
-    public String getTo()
-    {
+    public String getTo(){
         return to;
     }
 
     /**
      * Devuelve el cuerpo del mensaje
      */
-    public String getMessage() 
-    {	
+    public String getMessage() {	
+
         return message;
     }
 
     /**
      * Devuelve el asunto del mensaje
      */
-    public String getSubject() 
+    public String getSubject()
     {
         return subject;
     }
@@ -58,10 +58,10 @@ public class MailItem
      */
     public void print()
     {
-        System.out.println ("From: " + from);
-        System.out.println ("To: " + to);
-        System.out.println ("Message: " + message);
-        System.out.println ("Subject: " + subject);
+        System.out.println("De: " + from);
+        System.out.println("Para: " + to);
+        System.out.println("Asunto: " + subject);
+        System.out.println("Mensaje: " + message);
     }
 
 }
